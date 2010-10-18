@@ -1,8 +1,12 @@
 use strict;
 use warnings;
 use utf8;
+use 5.008_003;
 
 package Acme::AwesomeQuotes;
+BEGIN {
+  $Acme::AwesomeQuotes::VERSION = '0.02';
+}
 
 binmode STDIN,  ':utf8';
 binmode STDOUT, ':utf8';
@@ -90,13 +94,15 @@ sub checkstring {
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Acme::AwesomeQuotes - Make your text awesome!
 
 =head1 VERSION
 
-version 0.0.1
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -144,8 +150,6 @@ In addition, leading/trailing whitespace and punctuation is stripped, and the re
 
 Combining characters already present in the string are respected, and existing initial/terminal grave/acute accents will not be doubled.  However, in cases where both a grave and acute accent may be applied – such as if the initial letter has an acute accent, or if the string consists of only a single letter – a caron is used instead, because combining grave and acute accents on the same character doesn’t look so hot. :)
 
-=encoding utf8
-
 =for Pod::Coverage checkstring
 
 =head1 LIMITATIONS
@@ -167,6 +171,12 @@ A string that is already in `àwesome quoteś´ cannot be made I<more> awesome b
 =back
 
 =head1 BUGS
+
+None known, doubtless many undiscovered.
+
+=head1 SEE ALSO
+
+Acme::LeetSpeak L<http://search.cpan.org/~jmadler/Acme-LeetSpeak-0.01/lib/Acme/LeetSpeak.pm>
 
 =head1 ACKNOWLEDGEMENTS
 

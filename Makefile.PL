@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-
+BEGIN { require 5.008_003; }
 
 use ExtUtils::MakeMaker 6.31;
 
@@ -28,7 +28,7 @@ my %WriteMakefileArgs = (
     'Unicode::Normalize' => '0',
     'utf8' => '0'
   },
-  'VERSION' => '0.0.1',
+  'VERSION' => '0.02',
   'test' => {
     'TESTS' => 't/*.t'
   }

@@ -24,6 +24,7 @@
             "Carp" : 0,
             "Exporter" : 0,
             "Unicode::Normalize" : 0,
+            "perl" : "5.008_003",
             "utf8" : 0
          }
       },
@@ -35,6 +36,6 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.0.1"
+   "version" : "0.02"
 }
 
